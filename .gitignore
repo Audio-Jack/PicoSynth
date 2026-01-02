@@ -1,0 +1,20 @@
+# Build artifacts
+/build/
+/CMakeFiles/
+/CMakeCache.txt
+Makefile
+cmake_install.cmake
+*.elf
+*.uf2
+*.bin
+*.o
+*.obj
+
+# VS Code workspace/settings
+.vscode/
+*.code-workspace
+
+# Misc
+*.log
+*.swp
+*.DS_Store
