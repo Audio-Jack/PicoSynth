@@ -7,17 +7,12 @@ include($ENV{PICO_SDK_PATH}/pico_sdk_import.cmake)
 pico_sdk_init()
 
 # =========================
-# Include Pimoroni Pico (Audio Pack)
-# =========================
-include($ENV{PIMORONI_PICO_PATH}/pimoroni_pico_import.cmake)
-
-# =========================
 # Project
 # =========================
 project(PicoSynth C CXX ASM)
 
 # =========================
-# Gather all source files
+# Gather all source files recursively
 # =========================
 file(GLOB_RECURSE SRC_FILES
     "src/*.cpp"
@@ -38,9 +33,7 @@ target_include_directories(PicoSynth PRIVATE
 # Link libraries
 # =========================
 target_link_libraries(PicoSynth
-    pico_stdlib        # Pico standard library
-    hardware_i2s       # I2S peripheral (handled internally by Pimoroni)
-    pimoroni_pico      # Pimoroni Audio Pack library
+    pico_stdlib
 )
 
 # =========================
